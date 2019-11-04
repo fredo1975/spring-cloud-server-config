@@ -13,7 +13,7 @@ spring:
     gateway:
       routes:
         - id: dvdtheque-rest-services
-          uri: "*"
+          uri: "http://localhost:8083"
           predicates:
             - Path=/dvdtheque/**
       globalcors:
