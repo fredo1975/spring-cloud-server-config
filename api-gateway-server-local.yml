@@ -12,8 +12,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: lb://DVDTHEQUE-REST-SERVICES
-          uri: http://localhost:8083/
+        - id: dvdtheque-rest-services
+          uri: lb://DVDTHEQUE-REST-SERVICES
           predicates:
             - Path=/dvdtheque/**
       globalcors:
