@@ -8,6 +8,6 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     registerWithEureka: true
-    fetchRegistry: false
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
