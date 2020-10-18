@@ -4,7 +4,7 @@ server:
 eureka:
   environment: local
   instance:
-    hostname: discovery-server-1
+    hostname: bluechipit-1
   client:
     registryFetchIntervalSeconds: 5
     registerWithEureka: false
