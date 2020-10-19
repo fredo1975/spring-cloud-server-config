@@ -1,7 +1,6 @@
 server:
   port: 8761
-spring:
-  profiles: local
+
 eureka:
   environment: local
   instance:
