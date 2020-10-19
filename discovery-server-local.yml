@@ -4,7 +4,8 @@ server:
 eureka:
   instance:
     hostname: discovery-server-1
-    environment: local
+    environment: 
+      active-profiles: local
   client:
     register-with-eureka: false
     fetch-registry: false
