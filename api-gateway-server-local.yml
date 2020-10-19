@@ -10,6 +10,9 @@ eureka:
     preferIpAddress: true
 spring:
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
     gateway:
       routes:
         - id: dvdtheque-rest-services
