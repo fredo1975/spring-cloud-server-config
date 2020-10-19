@@ -2,9 +2,9 @@ server:
   port: 8761
 
 eureka:
+  environment: local
   instance:
     hostname: discovery-server-1
-    environment: local
   client:
     register-with-eureka: false
     fetch-registry: false
