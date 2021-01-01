@@ -1,4 +1,10 @@
+debug: true
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://idsvr.example.com/oauth/v2/oauth-anonymous
   datasource:
     url: jdbc:mysql://192.168.1.104/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris&useSSL=false
     username: oauth2
