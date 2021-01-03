@@ -3,3 +3,4 @@ spring:
     url: jdbc:mysql://localhost/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris
     username: fredo
     password: fredo
+    driver-class-name: com.mysql.jdbc.Driver

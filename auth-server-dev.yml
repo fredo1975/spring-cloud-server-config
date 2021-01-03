@@ -1,4 +1,3 @@
-debug: true
 spring:
   security:
     oauth2:
@@ -7,6 +6,6 @@ spring:
           issuer-uri: https://idsvr.example.com/oauth/v2/oauth-anonymous
   datasource:
     url: jdbc:mysql://192.168.1.104/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris&useSSL=false
-    username: oauth2
-    password: oauth2
+    username: fredo
+    password: fredo
     driver-class-name: com.mysql.jdbc.Driver
