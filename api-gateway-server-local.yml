@@ -19,6 +19,8 @@ spring:
       ribbon:
         enabled: false
     gateway:
+      default-filters:
+        - TokenRelay
       routes:
         - id: dvdtheque-rest-services
           uri: lb://DVDTHEQUE-REST-SERVICES
