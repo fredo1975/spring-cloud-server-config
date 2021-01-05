@@ -27,9 +27,6 @@ spring:
             user-info-uri: http://localhost:9999/uaa/api/auth
             user-name-attribute: sub
             jwk-set-uri: http://localhost:9999/uaa/token_keys
-      resourceserver:
-        jwt:
-        jwk-set-uri: http://localhost:9999/oauth/token_keys
   cloud:
     loadbalancer:
       ribbon:
