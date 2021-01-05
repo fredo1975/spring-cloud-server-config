@@ -9,9 +9,6 @@ eureka:
   instance:
     preferIpAddress: true
 spring:
-  autoconfigure:
-    # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
-    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
   security:
     oauth2:
       client:
@@ -21,7 +18,7 @@ spring:
             client-id: gateway
             client-secret: gateway
             authorization-grant-type: authorization_code
-            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             scope: openid,profile,email,resource.read
         provider:
           uaa:
