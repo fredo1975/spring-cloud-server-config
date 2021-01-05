@@ -14,19 +14,17 @@ spring:
       client:
         registration:
           gateway:
-            provider: auth-server
+            provider: uaa
             client-id: gateway
             client-secret: gateway
             authorization-grant-type: authorization_code
-            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
-            scope: write,read
         provider:
-          auth-server:
+          uaa:
             authorization-uri: http://localhost:9999/uaa/oauth/authorize
-            token-uri: http://localhost:9999/oauth/token
-            user-info-uri: http://localhost:9999/api/auth
+            token-uri: http://localhost:9999/uaa/oauth/token
+            user-info-uri: http://localhost:9999/uaa/api/auth
             user-name-attribute: sub
-            jwk-set-uri: http://localhost:9999/oauth/token_keys
+            jwk-set-uri: http://localhost:9999/uaa/token_keys
   cloud:
     loadbalancer:
       ribbon:
