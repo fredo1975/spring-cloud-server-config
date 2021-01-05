@@ -9,6 +9,24 @@ eureka:
   instance:
     preferIpAddress: true
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          gateway:
+            provider: uaa
+            client-id: gateway
+            client-secret: gateway
+            authorization-grant-type: authorization_code
+            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid,profile,email,resource.read
+        provider:
+          uaa:
+            authorization-uri: http://localhost:9999/uaa/oauth/authorize
+            token-uri: http://localhost:9999/uaa/oauth/token
+            user-info-uri: http://localhost:9999/uaa/api/auth
+            user-name-attribute: sub
+            jwk-set-uri: http://localhost:9999/uaa/token_keys
   cloud:
     loadbalancer:
       ribbon:
