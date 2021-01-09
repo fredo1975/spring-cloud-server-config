@@ -1,9 +1,15 @@
+jwtSecret: dvd
+jwtExpirationMs: 86400000
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://admin:admin@localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://idsvr.example.com/oauth/v2/oauth-anonymous
   datasource:
     url: jdbc:mysql://192.168.1.104/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris&useSSL=false
     username: fredo
