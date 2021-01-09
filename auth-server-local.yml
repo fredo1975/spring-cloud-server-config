@@ -1,3 +1,6 @@
+jwtSecret: dvd
+jwtExpirationMs: 86400000
+
 eureka:
   client:
     registerWithEureka: true
