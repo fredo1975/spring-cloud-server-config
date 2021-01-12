@@ -7,6 +7,11 @@ eureka:
   instance:
     preferIpAddress: true
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9999/uaa/oauth/token_keys
   datasource:
     url: jdbc:mysql://localhost/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris
     username: fredo
