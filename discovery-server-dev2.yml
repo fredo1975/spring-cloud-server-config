@@ -2,7 +2,7 @@ server:
   port: 8761
 
 eureka:
-  environment: local
+  environment: dev
   instance:
     hostname: discovery-server-2
   client:
