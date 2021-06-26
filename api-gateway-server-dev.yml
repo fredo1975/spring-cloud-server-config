@@ -4,13 +4,13 @@ eureka:
   environment: dev
   instance:
     hostname: 192.168.1.103
+    preferIpAddress: true
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://192.168.1.103:8761/eureka},${EUREKA_URI:http://192.168.1.105:8761/eureka}
-  instance:
-    preferIpAddress: true
+
 spring:
   cloud:
     gateway:
