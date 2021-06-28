@@ -3,7 +3,7 @@ server:
 eureka:
   environment: dev
   instance:
-    hostname: 192.168.1.103
+    hostname: 192.168.1.105
     preferIpAddress: true
   client:
     registerWithEureka: true
