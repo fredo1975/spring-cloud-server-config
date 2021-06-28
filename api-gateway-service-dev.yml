@@ -16,6 +16,9 @@ spring:
           uri: lb://DVDTHEQUE-REST-SERVICES
           predicates:
             - Path=/dvdtheque/**
+      discovery:
+        locator:
+          enabled: true
       globalcors:
         corsConfigurations:
           '[/**]':
