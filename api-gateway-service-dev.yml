@@ -1,3 +1,7 @@
+server:
+  port: 8762
+
+debug: true
 spring:
   cloud:
     gateway:
