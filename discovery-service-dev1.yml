@@ -3,6 +3,7 @@ eureka:
   instance:
     hostname: 192.168.1.105
     preferIpAddress: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: true
     fetch-registry: false
