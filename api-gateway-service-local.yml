@@ -14,7 +14,7 @@ spring:
         - id: dvdtheque-rest-services
           uri: lb://DVDTHEQUE-REST-SERVICES
           predicates:
-            - Path=/dvdtheqe/**
+            - Path=/dvdtheque/**
       globalcors:
         corsConfigurations:
           '[/**]':
