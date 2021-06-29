@@ -1,5 +1,3 @@
-debug: true
-
 eureka:
   client:
     registerWithEureka: true
