@@ -3,6 +3,7 @@ server:
 eureka:
   environment: dev
   instance:
+    hostname: 192.168.1.105
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     registerWithEureka: true
