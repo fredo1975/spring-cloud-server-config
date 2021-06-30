@@ -1,2 +1,2 @@
 # spring-cloud-server-config
-test
+test2
