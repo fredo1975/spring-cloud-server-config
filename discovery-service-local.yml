@@ -4,9 +4,9 @@ server:
 eureka:
   environment: local
   instance:
-    hostname: discovery-server-1
+    hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://admin:admin@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
