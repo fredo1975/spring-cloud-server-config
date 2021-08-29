@@ -7,9 +7,6 @@ logging:
     root: debug
     
 spring:
-  cloud:
-    config:
-      enabled: false
   datasource:
     username: fredo
     password: fredo
