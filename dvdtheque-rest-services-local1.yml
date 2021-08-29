@@ -28,11 +28,12 @@ spring:
     broker-url: tcp://192.168.1.105:61616
     user: admin
     password: admin
-security:
-   oauth2:
-     resourceserver:
-       jwt:
-         jwk-set-uri: http://localhost:9999/oauth/token_keys
+
+#security:
+#   oauth2:
+#     resourceserver:
+#       jwt:
+#         jwk-set-uri: http://localhost:9999/oauth/token_keys
 
 hibernate:
   hbm2ddl:
