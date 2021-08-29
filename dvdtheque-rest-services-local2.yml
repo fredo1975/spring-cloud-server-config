@@ -111,12 +111,6 @@ eureka:
     lease:
       duration: 5
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info
-
 stomp:
   endpoint: /dvdtheque
   relay:
