@@ -31,9 +31,9 @@ security:
        jwt:
          jwk-set-uri: http://localhost:9999/oauth/token_keys
 
-#hibernate:
-  #hbm2ddl:
-    #auto: validate
+hibernate:
+  hbm2ddl:
+    auto: validate
 
 csv:
   dvd:
