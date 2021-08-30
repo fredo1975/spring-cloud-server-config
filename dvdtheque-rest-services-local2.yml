@@ -108,7 +108,7 @@ eureka:
 stomp:
   endpoint: /dvdtheque
   relay:
-    host: 192.168.1.105
+    host: localhost
     port: 61613
     
 hazelcast:
@@ -116,4 +116,4 @@ hazelcast:
   networkconfig:
     interface: 192.168.1.*
     tcpipconfig:
-      members: 192.168.1.24
+      members: localhost
