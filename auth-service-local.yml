@@ -11,8 +11,8 @@ eureka:
     preferIpAddress: true
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris
+    type: com.zaxxer.hikari.HikariDataSource
     username: fredo
     password: fredo
     driver-class-name: com.mysql.jdbc.Driver
