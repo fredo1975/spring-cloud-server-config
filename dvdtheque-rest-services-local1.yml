@@ -1,0 +1,116 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    username: fredo
+    password: fredo
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  batch:
+    job:
+      enabled: false
+  activemq:
+    broker-url: tcp://192.168.1.105:61616
+    user: admin
+    password: admin
+
+security:
+   oauth2:
+     resourceserver:
+       jwt:
+         jwk-set-uri: http://localhost:9999/oauth/token_keys
+
+hibernate:
+  hbm2ddl:
+    auto: validate
+
+csv:
+  dvd:
+    file:
+      name:
+        import: src/test/resources/ListeDVD.csv
+rippedFlagTasklet:
+  from:
+    file: true
+retrieve:
+  date:
+    insertion: false
+excel:
+  dvd:
+    file:
+      path:
+        export: E:/dev/liste_dvd/
+      name:
+        export: export.xlsx
+dvd:
+  file:
+    path: G:/films
+import:
+  chunk:
+    size: 100
+
+batch:
+  save:
+    nb:
+      acteurs: 12
+limit:
+  film:
+    size: 40
+
+themoviedb:
+  search:
+    movie:
+      query: https://api.themoviedb.org/3/search/movie
+  movie:
+    query: https://api.themoviedb.org/3/movie/
+  api:
+    key: aa87a44fb22d65986512188cd2ec2ca0
+  poster:
+    path:
+      url: http://image.tmdb.org/t/p/w500
+
+allocine:
+  url: http://api.allocine.fr/rest/v3/
+  query:
+    search:
+      film: search
+    reviewlist: reviewlist
+    partner: yW5kcm9pZC12M3M
+    filter:
+      desk-press: desk-press
+      movie: movie
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+stomp:
+  endpoint: /dvdtheque
+  relay:
+    host: 192.168.1.105
+    port: 61613
+    
+hazelcast:
+  cluster-name: hazelcast-local
+  networkconfig:
+    interface: 192.168.1.*
+    tcpipconfig:
+      members: localhost
