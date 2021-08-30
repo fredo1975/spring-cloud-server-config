@@ -1,12 +1,3 @@
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://192.168.1.108:8761/eureka},${EUREKA_URI:http://192.168.1.106:8761/eureka}
-  instance:
-    hostname: 192.168.1.106
-    preferIpAddress: true
 spring:
   cloud:
     gateway:
@@ -25,3 +16,21 @@ spring:
             - POST
             - OPTIONS
             - PUT
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://192.168.1.108:8761/eureka},${EUREKA_URI:http://192.168.1.106:8761/eureka}
+  instance:
+    hostname: 192.168.1.106
+    preferIpAddress: true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
