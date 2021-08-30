@@ -16,7 +16,12 @@ spring:
     username: fredo
     password: fredo
     driver-class-name: com.mysql.jdbc.Driver
-    
+  security:
+    #oauth2:  
+      #resourceserver:  
+        #jwt: issuer-uri: https://idsvr.example.com/oauth/v2/oauth-anonymous
+    filter:
+      order: 10
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
