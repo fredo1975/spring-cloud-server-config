@@ -17,7 +17,7 @@ spring:
     password: fredo
     driver-class-name: com.mysql.jdbc.Driver
     
-ogging:
+logging:
   level:
-    org.springframework.cloud: TRACE
+    org.springframework.cloud.gateway: TRACE
     org.springframework.http.server.reactive: DEBUG
