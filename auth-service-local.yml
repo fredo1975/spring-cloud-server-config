@@ -20,8 +20,8 @@ spring:
     #oauth2:  
       #resourceserver:  
         #jwt: issuer-uri: https://idsvr.example.com/oauth/v2/oauth-anonymous
-    filter:
-      order: 10
+    #filter:
+      #order: 10
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
