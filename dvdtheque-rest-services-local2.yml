@@ -123,8 +123,8 @@ keycloak:
   realm: dvdtheque
   auth-server-url: http://localhost:8080/auth
   ssl-required: external
-  resource: dvdtheque-app
+  resource: dvdtheque-api
   credentials:
-    secret: 788a244d-fb34-4b89-851a-b3ff1f612acc
+    secret: 0ca3b735-a1fc-4bc8-81ae-02b46814263f
   use-resource-role-mappings: true
   bearer-only: true
