@@ -114,7 +114,7 @@ stomp:
     
 hazelcast:
   group:
-    name: 127.0.0.1
+    name: 192.168.1.133
   networkconfig:
     tcpipconfig:
       members: 192.168.1.133
