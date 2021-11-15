@@ -110,10 +110,10 @@ stomp:
     
 hazelcast:
   group:
-    name: localhost
+    name: 127.0.0.1
   networkconfig:
     tcpipconfig:
-      members: 127.0.0.1
+      members: localhost
 
 keycloak:
   realm: dvdtheque
