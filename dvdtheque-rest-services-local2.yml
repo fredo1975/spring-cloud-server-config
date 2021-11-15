@@ -117,7 +117,7 @@ hazelcast:
     name: localhost
   networkconfig:
     tcpipconfig:
-      members: localhost
+      members: 127.0.0.1
       
 keycloak:
   realm: dvdtheque
