@@ -113,8 +113,7 @@ stomp:
     port: 61613
     
 hazelcast:
-  group:
-    name: 192.168.1.133
+  cluster-name: hazelcast-local
   networkconfig:
     tcpipconfig:
       members: 192.168.1.133
