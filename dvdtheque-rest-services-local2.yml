@@ -63,7 +63,7 @@ import:
 batch:
   save:
     nb:
-      acteurs: 12
+      acteurs: 18
 limit:
   film:
     size: 40
