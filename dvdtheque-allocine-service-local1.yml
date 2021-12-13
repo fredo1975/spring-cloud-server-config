@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    platform: postgres
+    platform: POSTGRESQL
     username: fredo
     password: fredo
     type: com.zaxxer.hikari.HikariDataSource
