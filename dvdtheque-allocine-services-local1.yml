@@ -1,0 +1,56 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    platform: postgres
+    username: fredo
+    password: fredo
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://192.168.1.108:5432/allocinedb
+  jpa:
+    database: allocinedb
+    show-sql: false
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  batch:
+    job:
+      enabled: false
+  zipkin:
+    enabled: false
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+    
+hazelcast:
+  cluster-name: hazelcast-allocine-local
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.133
+
+keycloak:
+  realm: dvdtheque
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: dvdtheque-api
+  credentials:
+    secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
+  use-resource-role-mappings: true
+  bearer-only: true

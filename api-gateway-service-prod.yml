@@ -2,10 +2,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: dvdtheque-rest-services
-          uri: lb://DVDTHEQUE-REST-SERVICES
+        - id: dvdtheque-service
+          uri: lb://DVDTHEQUE-SERVICE
           predicates:
-            - Path=/dvdtheque/**
+            - Path=/dvdtheque-service/**
       globalcors:
         corsConfigurations:
           '[/**]':
