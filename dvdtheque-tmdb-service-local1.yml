@@ -19,7 +19,7 @@ hazelcast:
   cluster-name: hazelcast-tmdb-local
   networkconfig:
     tcpipconfig:
-      members: 192.168.1.133
+      members: 127.0.0.1
 
 keycloak:
   realm: dvdtheque
