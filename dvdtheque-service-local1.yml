@@ -110,12 +110,19 @@ hazelcast:
     tcpipconfig:
       members: 192.168.1.133
 
-keycloak:
-  realm: dvdtheque
-  auth-server-url: http://localhost:8080/auth
-  ssl-required: external
-  resource: dvdtheque-api
-  credentials:
-    secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
-  use-resource-role-mappings: true
-  bearer-only: true
+#keycloak:
+#  realm: dvdtheque
+#  auth-server-url: http://localhost:8080/auth
+#  ssl-required: external
+#  resource: dvdtheque-api
+#  credentials:
+#    secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
+#  use-resource-role-mappings: true
+#  bearer-only: true
+
+spring:  
+  security:  
+    oauth2:  
+      resourceserver:  
+        jwt:  
+          jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/certs
