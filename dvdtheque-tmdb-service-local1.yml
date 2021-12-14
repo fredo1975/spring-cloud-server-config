@@ -1,6 +1,12 @@
 server:
   port: 8086
 
+spring:
+  security:  
+    oauth2:  
+      resourceserver:  
+        jwt:  
+          jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
 eureka:
   instance:
     hostname: localhost
