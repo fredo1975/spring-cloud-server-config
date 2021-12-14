@@ -38,10 +38,10 @@ spring:
 #            userinfo-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/userinfo
 #            user-name-attribute: preferred_username
         registration:
-          keycloak-dvdtheque-api:
+          keycloak-spring-gateway-client:
             provider: my-keycloak-provider
-            client-id: dvdtheque-api
-            client-secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
+            client-id: spring-gateway-client
+            client-secret: 9328ca6f-91b6-4096-ab79-885bb49aad27
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
 
