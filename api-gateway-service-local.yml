@@ -32,13 +32,13 @@ spring:
     oauth2:
       client:
         provider:
-          keycloak:
+          my-keycloak-provider:
             issuer-uri: http://localhost:8080/auth/realms/dvdtheque
             # Individual properties can also be provided this way
 #            token-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/token
 #            authorization-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/auth
 #            userinfo-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/userinfo
-            user-name-attribute: preferred_username
+#            user-name-attribute: preferred_username
         registration:
           keycloak-spring-gateway-client:
             provider: my-keycloak-provider
