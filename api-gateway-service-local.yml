@@ -7,7 +7,7 @@ spring:
         - RemoveRequestHeader=Cookie
       routes:
         - id: dvdtheque-service
-          uri: lb://dvdtheque-service
+          uri: lb://DVDTHEQUE-SERVICE
           predicates:
             - Path=/dvdtheque-service/**
         - id: dvdtheque-allocine-service
