@@ -3,9 +3,10 @@ spring:
     gateway:
       default-filters:
         - TokenRelay
+        - RemoveRequestHeader=Cookie
       routes:
         - id: dvdtheque-service
-          uri: lb://DVDTHEQUE-SERVICE
+          uri: lb://dvdtheque-service
           predicates:
             - Path=/dvdtheque-service/**
         - id: dvdtheque-allocine-service
