@@ -23,7 +23,7 @@ spring:
             allowedOrigins: "*"
             allowedHeaders: "*"
             allowedMethods: "*"
-            maxAge: 3600L
+            maxAge: 3600
   security:
     oauth2:
       client:
