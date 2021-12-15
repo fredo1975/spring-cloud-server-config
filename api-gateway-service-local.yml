@@ -3,6 +3,7 @@ spring:
     gateway:
       default-filters:
         - TokenRelay
+        - StripPrefix=1
       routes:
         - id: dvdtheque-service
           uri: lb://dvdtheque-service
@@ -55,8 +56,8 @@ logging:
     org.springframework.cloud.gateway: TRACE
     org.springframework.http.server.reactive: TRACE
     org.springframework.web.reactive: TRACE
-    reactor.ipc.netty: INFO
-    reactor.netty: INFO
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
     org:
         springframework:
           security:
