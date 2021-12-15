@@ -36,7 +36,7 @@ spring:
 #            user-name-attribute: preferred_username
         registration:
           keycloak:
-            provider: my-keycloak-provider
+            provider: keycloak
             client-id: gateway-client
             client-secret: 5b1d7563-7a90-430b-8028-d18043812cec
             authorization-grant-type: authorization_code
