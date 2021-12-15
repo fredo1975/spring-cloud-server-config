@@ -3,7 +3,6 @@ spring:
     gateway:
       default-filters:
         - TokenRelay
-        - RemoveRequestHeader=Cookie
         - StripPrefix=1
       routes:
         - id: dvdtheque-service
@@ -23,11 +22,8 @@ spring:
           '[/**]':
             allowedOrigins: "*"
             allowedHeaders: "*"
-            allowedMethods:
-            - GET
-            - POST
-            - OPTIONS
-            - PUT
+            allowedMethods: "*"
+            maxAge: 3600L
   security:
     oauth2:
       client:
