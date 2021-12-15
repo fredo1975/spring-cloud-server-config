@@ -4,6 +4,7 @@ spring:
       default-filters:
         - TokenRelay
         - RemoveRequestHeader=Cookie
+        - StripPrefix=1
       routes:
         - id: dvdtheque-service
           uri: lb://dvdtheque-service
@@ -34,8 +35,8 @@ spring:
           my-keycloak-provider:
             issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
             # Individual properties can also be provided this way
-#            token-uri: http://localhost:8080/auth/realms/amrutrealm/protocol/openid-connect/token
-#            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
+            token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
+            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
 #            userinfo-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/userinfo
 #            user-name-attribute: preferred_username
         registration:
