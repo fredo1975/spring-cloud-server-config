@@ -39,7 +39,7 @@ spring:
           gateway-client:
             provider: my-keycloak-provider
             client-id: gateway-client
-            client-secret: 5d803566-399e-40f3-a25a-404bb67a69a3
+            client-secret: 5b1d7563-7a90-430b-8028-d18043812cec
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
 
