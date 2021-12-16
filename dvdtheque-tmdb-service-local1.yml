@@ -38,3 +38,10 @@ hazelcast:
   networkconfig:
     tcpipconfig:
       members: 127.0.0.1
+      
+logging:
+  level:
+    org:
+        springframework:
+          security:
+            web: TRACE
