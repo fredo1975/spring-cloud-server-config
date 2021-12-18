@@ -4,15 +4,15 @@ spring:
       default-filters:
         - TokenRelay
       routes:
-        - id: dvdtheque-service
+        - id: route-dvdtheque-service
           uri: lb://dvdtheque-service
           predicates:
             - Path=/dvdtheque-service/**
-        - id: dvdtheque-allocine-service
+        - id: route-dvdtheque-allocine-service
           uri: lb://dvdtheque-allocine-service
           predicates:
             - Path=/dvdtheque-allocine-service/**
-        - id: dvdtheque-tmdb-service
+        - id: route-dvdtheque-tmdb-service
           uri: lb://dvdtheque-tmdb-service
           predicates:
             - Path=/dvdtheque-tmdb-service/**
