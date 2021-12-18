@@ -35,8 +35,7 @@ spring:
 #            userinfo-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/userinfo
 #            user-name-attribute: preferred_username
         registration:
-          gateway-client:
-            provider: my-keycloak-provider
+          my-keycloak-provider: 
             client-id: gateway-client
             client-secret: 5b1d7563-7a90-430b-8028-d18043812cec
             authorization-grant-type: authorization_code
