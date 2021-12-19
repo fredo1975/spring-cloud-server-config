@@ -23,6 +23,10 @@ spring:
     password: admin
   zipkin:
     enabled: false
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
   security:
     oauth2:
       resourceserver:
