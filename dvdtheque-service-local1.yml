@@ -81,7 +81,7 @@ limit:
     size: 40
 
 tmdb-service:
-  url: http://localhost:8086/dvdtheque-tmdb-service
+  url: http://localhost:8762/dvdtheque-tmdb-service
   byTitle: /retrieveTmdbFilmListByTitle/byTitle
   release-date: /retrieveTmdbFrReleaseDate/byTmdbId
   get-credits: /retrieveTmdbCredits/byTmdbId
