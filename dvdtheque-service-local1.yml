@@ -31,7 +31,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
 
 hibernate:
   hbm2ddl:
