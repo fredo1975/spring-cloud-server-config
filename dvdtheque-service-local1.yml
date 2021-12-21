@@ -38,6 +38,10 @@ spring:
             client-id: gateway-client
             client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
             authorization-grant-type: client_credentials
+            token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
+            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
+            userinfo-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
