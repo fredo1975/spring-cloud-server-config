@@ -39,6 +39,7 @@ spring:
             client-secret: aa606412-d08b-49a7-b28e-ba78f4322744
             authorization-grant-type: authorization_code  
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
+            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
