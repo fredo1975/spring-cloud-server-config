@@ -33,6 +33,12 @@ spring:
         provider:
           keycloak:
             token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
+        registration:
+          keycloak:
+            client-id: dvdtheque-api
+            client-secret: aa606412-d08b-49a7-b28e-ba78f4322744
+            authorization-grant-type: authorization_code  
+            redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
