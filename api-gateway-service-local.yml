@@ -1,5 +1,8 @@
 spring:
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
     gateway:
       default-filters:
         - TokenRelay
@@ -30,9 +33,9 @@ spring:
           keycloak:
             issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
             # Individual properties can also be provided this way
-            token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
-            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/userinfo
+#            token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
+#            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
+#            userinfo-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
         registration:
           keycloak: 
