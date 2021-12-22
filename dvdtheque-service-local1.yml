@@ -29,6 +29,10 @@ spring:
         enabled: false
   security:
     oauth2:
+      client:
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
