@@ -23,11 +23,6 @@ spring:
     password: admin
   zipkin:
     enabled: false
-  security:  
-    oauth2:  
-      resourceserver:  
-        jwt:  
-          jwk-set-uri: http://localhost:9999/oauth/token_keys
 
 hibernate:
   hbm2ddl:
@@ -119,3 +114,9 @@ keycloak:
     secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
   use-resource-role-mappings: true
   bearer-only: true
+  
+security:  
+    oauth2:  
+      resourceserver:  
+        jwt:  
+          jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/certs
