@@ -7,8 +7,8 @@ spring:
       registration:
         keycloak:
           provider: dvdtheque-realm
-          client-id: gateway-client
-          client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
+          client-id: dvdtheque-api
+          client-secret: fbb9b1a1-3050-477c-8485-d07a9ee6397c
           authorization-grant-type: client_credentials
           token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
     oauth2:
