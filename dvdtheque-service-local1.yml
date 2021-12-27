@@ -37,7 +37,7 @@ spring:
             provider: dvdtheque-realm
             client-id: gateway-client
             client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
-            authorization-grant-type: client_credentials
+            authorization-grant-type: authorization_code
     oauth2:
       resourceserver:
         jwt:
