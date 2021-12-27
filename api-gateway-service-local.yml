@@ -6,7 +6,6 @@ spring:
     gateway:
       default-filters:
         - TokenRelay=
-        - RemoveRequestHeader=Cookie
       routes:
         - id: dvdtheque-service
           uri: lb://dvdtheque-service
