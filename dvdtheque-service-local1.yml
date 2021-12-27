@@ -28,14 +28,6 @@ spring:
       ribbon:
         enabled: false
   security:
-    client:
-      registration:
-        keycloak:
-          provider: dvdtheque-realm
-          client-id: gateway-client
-          client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
-          authorization-grant-type: client_credentials
-          token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
     oauth2:
       resourceserver:
         jwt:
