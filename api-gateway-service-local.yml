@@ -41,8 +41,8 @@ spring:
           keycloak: 
             client-id: gateway-client
             client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/keykloak"
+#            authorization-grant-type: authorization_code
+#            redirect-uri: "{baseUrl}/login/oauth2/code/keykloak"
 
 eureka:
   client:
