@@ -34,10 +34,8 @@ spring:
             provider: dvdtheque-realm
             client-id: gateway-client
             client-secret: 86efef59-d234-4a72-9de0-24ee2461effd
-            authorization-grant-type: authorization_code
+            authorization-grant-type: client_credentials
             token-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/token
-            authorization-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/auth
-            redirect-uri: "{baseUrl}/login/oauth2/code/keykloak"
     oauth2:
       resourceserver:
         jwt:
