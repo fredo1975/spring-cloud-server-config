@@ -5,7 +5,7 @@ spring:
         enabled: false
     gateway:
       default-filters:
-        - TokenRelay
+        - TokenRelay=
         - RemoveRequestHeader=Cookie
       routes:
         - id: dvdtheque-service
