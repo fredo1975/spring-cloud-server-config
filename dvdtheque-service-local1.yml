@@ -27,13 +27,14 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
-          issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
-          user-name-attribute: preferred_username
+  
+security:
+  oauth2:
+    resourceserver:
+      jwt:
+        #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+        issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
+        user-name-attribute: preferred_username
 
 hibernate:
   hbm2ddl:
