@@ -21,8 +21,8 @@ spring:
   rabbitmq:
     host: 192.168.99.100
     port: 32777
-  main:
-    web-application-type: none
+#  main:
+#    web-application-type: none
 
 eureka:
   client:
