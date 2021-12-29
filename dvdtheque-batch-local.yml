@@ -12,9 +12,6 @@ spring:
       enabled: false
     job:
       enabled: false
-  cloud:
-    config:
-      enabled: false
     stream:
       bindings:
         output:
