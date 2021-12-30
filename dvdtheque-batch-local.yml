@@ -21,6 +21,16 @@ spring:
   rabbitmq:
     host: 192.168.99.100
     port: 32777
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+            client-id: dvdtheque-api
+            client-secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
+            authorization-grant-type: client_credentials
+            
 #  main:
 #    web-application-type: none
 
