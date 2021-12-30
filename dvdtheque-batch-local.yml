@@ -29,8 +29,8 @@ spring:
             token-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/token
         registration:
           keycloak:
-            client-id: dvdtheque-batch-api
-            client-secret: 17aed6b7-c742-43a2-b1a7-6ad6a9949870
+            client-id: dvdtheque-api
+            client-secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
             authorization-grant-type: client_credentials
             
 #  main:
