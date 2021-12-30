@@ -39,8 +39,18 @@ spring:
             authorization-grant-type: client_credentials
 
 eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
   client:
-    enabled: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
 
 batch:
   save:
