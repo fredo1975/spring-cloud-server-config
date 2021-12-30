@@ -122,4 +122,5 @@ keycloak:
   credentials:
     secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
   use-resource-role-mappings: true
+  enable-cors: true
   bearer-only: true
