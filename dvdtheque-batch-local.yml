@@ -11,7 +11,7 @@ spring:
     initializer:
       enabled: false
     job:
-      enabled: false
+      enabled: true
     stream:
       bindings:
         output:
@@ -74,7 +74,7 @@ hazelcast:
     interface: 127.0.0.1
 
 dvdtheque-service:
-  url: http://fake/dvdtheque-service
+  url: http://localhost:8762/dvdtheque-service
   films: /films/
   transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
   
