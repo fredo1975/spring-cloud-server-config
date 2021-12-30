@@ -92,7 +92,7 @@ dvdtheque-service:
   transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
   cleanAllFilms: /films/cleanAllfilms
   buildDvd: /films/buildDvd
-  saveFilm: /films/save/
+  saveFilm: /films/saveAlreadyTransformed/
   
 tmdb-service:
   url: http://localhost:8762/dvdtheque-tmdb-service
