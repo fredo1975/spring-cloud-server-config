@@ -120,6 +120,6 @@ keycloak:
   ssl-required: external
   resource: dvdtheque-api
   credentials:
-    secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
+    secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
   use-resource-role-mappings: true
   bearer-only: true

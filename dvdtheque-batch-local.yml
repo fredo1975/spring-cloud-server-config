@@ -32,6 +32,7 @@ spring:
             client-id: dvdtheque-api
             client-secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
             authorization-grant-type: client_credentials
+            scope: email
             
 #  main:
 #    web-application-type: none
@@ -79,7 +80,7 @@ dvdtheque-service:
   transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
   
 tmdb-service:
-  url: http://fake/dvdtheque-tmdb-service
+  url: http://localhost:8762/dvdtheque-tmdb-service
   byTitle: /retrieveTmdbFilmListByTitle/byTitle
   release-date: /retrieveTmdbFrReleaseDate/byTmdbId
   get-credits: /retrieveTmdbCredits/byTmdbId
