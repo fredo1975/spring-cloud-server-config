@@ -74,7 +74,7 @@ tmdb-service:
 
 dvdtheque-batch-service:
   url: http://localhost:8762/dvdtheque-batch-service
-  import: /films/import
+  import: /invokejob/importFilmsJob
   
 themoviedb:
   poster:
