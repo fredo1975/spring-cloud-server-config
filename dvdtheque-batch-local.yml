@@ -23,6 +23,11 @@ spring:
     port: 32777
   security:
     oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/auth/realms/dvdtheque-realm
+          user-name-attribute: preferred_username
       client:
         provider:
           keycloak:
@@ -32,9 +37,6 @@ spring:
             client-id: dvdtheque-api
             client-secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
             authorization-grant-type: client_credentials
-            
-  main:
-    web-application-type: servlet
 
 eureka:
   client:
