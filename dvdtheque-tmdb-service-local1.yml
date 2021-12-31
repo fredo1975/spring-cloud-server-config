@@ -6,7 +6,7 @@ eureka:
     hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
