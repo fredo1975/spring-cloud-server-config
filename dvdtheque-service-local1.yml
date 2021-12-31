@@ -32,31 +32,6 @@ hibernate:
   hbm2ddl:
     auto: validate
 
-csv:
-  dvd:
-    file:
-      name:
-        import: src/test/resources/ListeDVD.csv
-rippedFlagTasklet:
-  from:
-    file: true
-retrieve:
-  date:
-    insertion: false
-excel:
-  dvd:
-    file:
-      path:
-        export: E:/dev/liste_dvd/
-      name:
-        export: export.xlsx
-dvd:
-  file:
-    path: G:/films
-import:
-  chunk:
-    size: 100
-
 batch:
   save:
     nb:
@@ -75,22 +50,6 @@ tmdb-service:
 dvdtheque-batch-service:
   url: http://localhost:8762/dvdtheque-batch-service
   import: /invokejob/importFilmsJob
-  
-themoviedb:
-  poster:
-    path:
-      url: http://image.tmdb.org/t/p/w500
-      
-allocine:
-  url: http://api.allocine.fr/rest/v3/
-  query:
-    search:
-      film: search
-    reviewlist: reviewlist
-    partner: yW5kcm9pZC12M3M
-    filter:
-      desk-press: desk-press
-      movie: movie
 
 eureka:
   instance:

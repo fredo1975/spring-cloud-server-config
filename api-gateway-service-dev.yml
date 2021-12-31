@@ -3,9 +3,21 @@ spring:
     gateway:
       routes:
         - id: dvdtheque-service
-          uri: lb://DVDTHEQUE-SERVICE
+          uri: lb://dvdtheque-service
           predicates:
             - Path=/dvdtheque-service/**
+        - id: dvdtheque-allocine-service
+          uri: lb://dvdtheque-allocine-service
+          predicates:
+            - Path=/dvdtheque-allocine-service/**
+        - id: dvdtheque-tmdb-service
+          uri: lb://dvdtheque-tmdb-service
+          predicates:
+            - Path=/dvdtheque-tmdb-service/**
+        - id: dvdtheque-batch-service
+          uri: lb://dvdtheque-batch-service
+          predicates:
+            - Path=/dvdtheque-batch-service/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -16,6 +28,7 @@ spring:
             - POST
             - OPTIONS
             - PUT
+
 eureka:
   client:
     registerWithEureka: true
