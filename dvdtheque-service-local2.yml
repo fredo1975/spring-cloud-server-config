@@ -51,6 +51,11 @@ dvdtheque-batch-service:
   url: http://localhost:8762/dvdtheque-batch-service
   import: /invokejob/importFilmsJob
 
+themoviedb:
+  poster:
+    path:
+      url: http://image.tmdb.org/t/p/w500
+
 eureka:
   instance:
     hostname: localhost
