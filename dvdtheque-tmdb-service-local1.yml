@@ -26,12 +26,6 @@ themoviedb:
   poster:
     path:
       url: http://image.tmdb.org/t/p/w500
-  
-hazelcast:
-  cluster-name: hazelcast-tmdb-local
-  networkconfig:
-    tcpipconfig:
-      members: 127.0.0.1
 
 keycloak:
   realm: dvdtheque
