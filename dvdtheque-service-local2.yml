@@ -6,7 +6,7 @@ spring:
     username: postgres
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque
+    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-service
     testWhileIdle: true
     validationQuery: SELECT 1
   jpa:
