@@ -3,17 +3,14 @@ server:
 
 spring:
   datasource:
-    username: fredo
-    password: fredo
+    username: postgres
+    password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://192.168.1.100/dvdtheque?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Paris
+    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-service
     testWhileIdle: true
     validationQuery: SELECT 1
   jpa:
     show-sql: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
   batch:
     job:
       enabled: false
