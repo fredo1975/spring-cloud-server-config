@@ -10,6 +10,22 @@ spring:
     url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
   jpa:
     show-sql: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/auth/realms/dvdtheque
+          user-name-attribute: preferred_username
+      client:
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+        registration:
+          keycloak:
+            client-id: dvdtheque-api
+            client-secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
+            authorization-grant-type: client_credentials
 
 eureka:
   instance:
