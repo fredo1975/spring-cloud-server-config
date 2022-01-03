@@ -6,7 +6,7 @@ spring:
     username: postgres
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-service
+    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-batch-service
   batch:
     initialize-schema: never
     initializer:
