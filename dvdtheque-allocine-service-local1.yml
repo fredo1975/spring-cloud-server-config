@@ -56,3 +56,7 @@ keycloak:
     secret: 25d3fa6d-26d2-4c57-807d-7029549fc688
   use-resource-role-mappings: true
   bearer-only: true
+  
+nb:
+  parsed:
+    page: 1000
