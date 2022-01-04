@@ -57,6 +57,10 @@ keycloak:
   use-resource-role-mappings: true
   bearer-only: true
   
+fichefilm:
+  parsing:
+    page: 1
+    cron: 0 44 23 * * ?
 nb:
   parsed:
-    page: 100
+    page: 10
