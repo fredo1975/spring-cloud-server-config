@@ -1,0 +1,65 @@
+server:
+  port: 8087
+
+spring:
+  datasource:
+    username: dvdtheque
+    password: zotla7
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-service
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://192.168.1.105:8080/auth/realms/dvdtheque
+          user-name-attribute: preferred_username
+      client:
+        provider:
+          keycloak:
+            token-uri: http://192.168.1.105:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+        registration:
+          keycloak:
+            client-id: dvdtheque-api
+            client-secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
+            authorization-grant-type: client_credentials
+
+eureka:
+  instance:
+    hostname: 192.168.1.105
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 2
+  client:
+    service-url:
+      defaultZone: http://192.168.1.103:8761/eureka/,http://192.168.1.105:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 2
+
+    
+hazelcast:
+  cluster-name: hazelcast-allocine-dev
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.133
+
+keycloak:
+  realm: dvdtheque
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: dvdtheque-api
+  credentials:
+    secret: 6ac56dc9-255b-4534-a6bb-c657016127a8
+  use-resource-role-mappings: true
+  bearer-only: true
+  
+fichefilm:
+  parsing:
+    page: 20
+    cron: 0 20 21 * * ?
