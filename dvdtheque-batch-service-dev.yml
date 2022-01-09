@@ -74,7 +74,7 @@ excel:
   dvd:
     file:
       path:
-        export:
+        export: /home/fredo/
       name:
         export: export.xlsx
 
