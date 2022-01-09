@@ -24,7 +24,17 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
+    org:
+        springframework:
+          security:
+            web: DEBUG
 hibernate:
   hbm2ddl:
     auto: validate
