@@ -68,7 +68,7 @@ eureka:
       duration: 2
 
 stomp:
-  endpoint: /dvdtheque-service
+  endpoint: /dvdtheque-ws
   relay:
     host: 192.168.1.105
     port: 61613
