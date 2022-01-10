@@ -5,7 +5,7 @@ spring:
         - id: dvdtheque-service
           uri: lb://dvdtheque-service
           predicates:
-            - Path=/dvdtheque-service/**
+            - Path=/dvdtheque-service/**,/dvdtheque-ws/**
         - id: dvdtheque-allocine-service
           uri: lb://dvdtheque-allocine-service
           predicates:
