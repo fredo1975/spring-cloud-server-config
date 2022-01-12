@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     platform: postgres
-    username: zotla7
+    username: postgres
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
