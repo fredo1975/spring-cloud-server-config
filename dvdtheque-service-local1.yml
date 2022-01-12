@@ -59,7 +59,7 @@ dvdtheque-batch-service:
   import: /invokejob/importFilmsJob
 
 allocine-service:
-  url: http://localhost:8762/dvdtheque-tmdb-service
+  url: http://localhost:8762/dvdtheque-allocine-service
   byTitle: /retrieveTmdbFilmListByTitle/byTitle
   
 themoviedb:
