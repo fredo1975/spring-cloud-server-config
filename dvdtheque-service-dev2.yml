@@ -48,6 +48,10 @@ dvdtheque-batch-service:
   url: http://192.168.1.105:8762/dvdtheque-batch-service
   import: /invokejob/importFilmsJob
 
+allocine-service:
+  url: http://192.168.1.105:8762/dvdtheque-allocine-service
+  byTitle: /byTitle
+
 themoviedb:
   poster:
     path:
