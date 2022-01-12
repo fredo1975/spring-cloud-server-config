@@ -60,7 +60,7 @@ dvdtheque-batch-service:
 
 allocine-service:
   url: http://localhost:8762/dvdtheque-allocine-service
-  byTitle: /retrieveTmdbFilmListByTitle/byTitle
+  byTitle: /byTitle
   
 themoviedb:
   poster:
