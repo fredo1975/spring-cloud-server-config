@@ -40,12 +40,6 @@ eureka:
       enabled: true
     lease:
       duration: 5
-    
-hazelcast:
-  cluster-name: hazelcast-allocine-local
-  networkconfig:
-    tcpipconfig:
-      members: 192.168.1.133
 
 keycloak:
   realm: dvdtheque
