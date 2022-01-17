@@ -1,0 +1,104 @@
+debug: false
+spring:
+  datasource:
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    username: dvdtheque
+    password: zotla7
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://192.168.1.108:5432/dvdthequepdb?currentSchema=dvdtheque-batch-service
+  batch:
+    initialize-schema: never
+    initializer:
+      enabled: false
+    job:
+      enabled: false
+    stream:
+      bindings:
+        output:
+          destination: input
+      default:
+        contentType: application/json
+  activemq:
+    broker-url: tcp://192.168.1.108:61616
+    user: admin
+    password: admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://192.168.1.105:8080/auth/realms/dvdtheque
+          user-name-attribute: preferred_username
+      client:
+        provider:
+          keycloak:
+            token-uri: http://192.168.1.105:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+        registration:
+          keycloak:
+            client-id: dvdtheque-api
+            client-secret: 6ac56dc9-255b-4534-a6bb-c657016127a8
+            authorization-grant-type: client_credentials
+
+eureka:
+  instance:
+    hostname: 192.168.1.108
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 2
+  client:
+    service-url:
+      defaultZone: http://192.168.1.106:8761/eureka/,http://192.168.1.108:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 2
+
+batch:
+  save:
+    nb:
+      acteurs: 12
+
+csv:
+  dvd:
+    file:
+      name:
+        import: src/test/resources/ListeDVD.csv
+rippedFlagTasklet:
+  from:
+    file: true
+retrieve:
+  date:
+    insertion: false
+excel:
+  dvd:
+    file:
+      path:
+        export: /opt/dvdtheque_batch_service/
+      name:
+        export: export.xlsx
+
+dvd:
+  file:
+    path: G:/films
+
+hazelcast:
+  cluster-name: hazelcast-prod
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.106,192.168.1.108
+
+dvdtheque-service:
+  url: http://192.168.1.106:8762/dvdtheque-service
+  films: /films/
+  transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
+  cleanAllFilms: /films/cleanAllfilms
+  buildDvd: /films/buildDvd
+  saveFilm: /films/saveProcessedFilm
+  
+tmdb-service:
+  url: http://192.168.1.106:8762/dvdtheque-tmdb-service
+  byTitle: /retrieveTmdbFilmListByTitle/byTitle
+  release-date: /retrieveTmdbFrReleaseDate/byTmdbId
+  get-credits: /retrieveTmdbCredits/byTmdbId
+  get-results: /retrieveTmdbFilm/byTmdbId
