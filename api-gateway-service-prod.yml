@@ -2,10 +2,22 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: dvdtheque-rest-services
-          uri: lb://DVDTHEQUE-REST-SERVICES
+        - id: dvdtheque-service
+          uri: lb://dvdtheque-service
           predicates:
-            - Path=/dvdtheque/**
+            - Path=/dvdtheque-service/**,/dvdtheque-ws/**
+        - id: dvdtheque-allocine-service
+          uri: lb://dvdtheque-allocine-service
+          predicates:
+            - Path=/dvdtheque-allocine-service/**
+        - id: dvdtheque-tmdb-service
+          uri: lb://dvdtheque-tmdb-service
+          predicates:
+            - Path=/dvdtheque-tmdb-service/**
+        - id: dvdtheque-batch-service
+          uri: lb://dvdtheque-batch-service
+          predicates:
+            - Path=/dvdtheque-batch-service/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -25,8 +37,8 @@ eureka:
 
 logging:
   level:
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.http.server.reactive: DEBUG
-    org.springframework.web.reactive: DEBUG
-    reactor.ipc.netty: DEBUG
-    reactor.netty: DEBUG
+    org.springframework.cloud.gateway: INFO
+    org.springframework.http.server.reactive: INFO
+    org.springframework.web.reactive: INFO
+    reactor.ipc.netty: INFO
+    reactor.netty: INFO

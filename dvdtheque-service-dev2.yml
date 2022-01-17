@@ -1,0 +1,95 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    username: dvdtheque
+    password: zotla7
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-service
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: false
+  batch:
+    job:
+      enabled: false
+  activemq:
+    broker-url: tcp://192.168.1.105:61616
+    user: admin
+    password: admin
+  zipkin:
+    enabled: false
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+hibernate:
+  hbm2ddl:
+    auto: validate
+
+batch:
+  save:
+    nb:
+      acteurs: 18
+limit:
+  film:
+    size: 40
+
+tmdb-service:
+  url: http://192.168.1.105:8762/dvdtheque-tmdb-service
+  byTitle: /retrieveTmdbFilmListByTitle/byTitle
+  release-date: /retrieveTmdbFrReleaseDate/byTmdbId
+  get-credits: /retrieveTmdbCredits/byTmdbId
+  get-results: /retrieveTmdbFilm/byTmdbId
+
+dvdtheque-batch-service:
+  url: http://192.168.1.105:8762/dvdtheque-batch-service
+  import: /invokejob/importFilmsJob
+
+allocine-service:
+  url: http://192.168.1.105:8762/dvdtheque-allocine-service
+  byTitle: /byTitle
+
+themoviedb:
+  poster:
+    path:
+      url: http://image.tmdb.org/t/p/w500
+
+eureka:
+  instance:
+    hostname: 192.168.1.105
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 2
+  client:
+    service-url:
+      defaultZone: http://192.168.1.103:8761/eureka/,http://192.168.1.105:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 2
+
+stomp:
+  endpoint: /dvdtheque-ws
+  relay:
+    host: 192.168.1.105
+    port: 61613
+    
+hazelcast:
+  cluster-name: hazelcast-dev
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.103,192.168.1.105
+
+keycloak:
+  realm: dvdtheque-dev
+  auth-server-url: http://192.168.1.105:8080/auth
+  ssl-required: external
+  resource: dvdtheque-api
+  credentials:
+    secret: 6ac56dc9-255b-4534-a6bb-c657016127a8
+  use-resource-role-mappings: true
+  cors: true
+  bearer-only: true
