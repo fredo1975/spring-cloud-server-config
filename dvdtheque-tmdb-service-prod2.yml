@@ -33,7 +33,7 @@ keycloak:
   ssl-required: external
   resource: dvdtheque-api
   credentials:
-    secret: 6ac56dc9-255b-4534-a6bb-c657016127a8
+    secret: 397350a4-9307-4134-9fec-c27736157381
   use-resource-role-mappings: true
   cors: true
   bearer-only: true
