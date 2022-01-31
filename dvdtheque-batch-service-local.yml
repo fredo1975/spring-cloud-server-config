@@ -12,7 +12,7 @@ spring:
     initializer:
       enabled: false
     job:
-      enabled: false
+      enabled: true
     stream:
       bindings:
         output:
