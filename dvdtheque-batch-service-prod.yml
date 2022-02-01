@@ -82,12 +82,6 @@ dvd:
   file:
     path: G:/films
 
-hazelcast:
-  cluster-name: hazelcast-prod
-  networkconfig:
-    tcpipconfig:
-      members: 192.168.1.106,192.168.1.108
-
 dvdtheque-service:
   url: http://192.168.1.106:8762/dvdtheque-service
   films: /films/
