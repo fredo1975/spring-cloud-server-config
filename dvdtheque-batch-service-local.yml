@@ -74,18 +74,13 @@ excel:
   dvd:
     file:
       path:
-        export:
+        export: D:/dev/liste_dvd
       name:
         export: export.xlsx
 
 dvd:
   file:
     path: G:/films
-
-hazelcast:
-  cluster-name: hazelcast-local
-  networkconfig:
-    interface: 127.0.0.1
 
 dvdtheque-service:
   url: http://localhost:8762/dvdtheque-service
