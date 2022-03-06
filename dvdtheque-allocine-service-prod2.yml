@@ -55,4 +55,4 @@ keycloak:
 fichefilm:
   parsing:
     page: 4000
-    cron: 0 20 21 * * ?
+    cron: 0 20 00 * * ?
