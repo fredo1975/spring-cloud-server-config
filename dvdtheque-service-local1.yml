@@ -2,6 +2,13 @@ server:
   port: 8083
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/auth/realms/dvdtheque
+          user-name-attribute: preferred_username
   datasource:
     username: postgres
     password: zotla7
