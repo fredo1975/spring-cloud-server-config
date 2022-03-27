@@ -1,5 +1,7 @@
 debug: false
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     testWhileIdle: true
     validationQuery: SELECT 1
