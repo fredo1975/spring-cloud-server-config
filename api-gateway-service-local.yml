@@ -4,6 +4,8 @@ spring:
       routes:
         - id: dvdtheque-service
           uri: lb://dvdtheque-service
+          filters:
+            - StripPrefix=1
           predicates:
             - Path=/dvdtheque-service/**,/dvdtheque-ws/**
         - id: dvdtheque-allocine-service
