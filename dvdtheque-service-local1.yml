@@ -89,7 +89,7 @@ eureka:
       duration: 5
 
 stomp:
-  endpoint: /dvdtheque-ws
+  endpoint: /dvdtheque-ws/websocket
   relay:
     host: 192.168.1.105
     port: 61613
