@@ -99,14 +99,3 @@ hazelcast:
   networkconfig:
     tcpipconfig:
       members: 192.168.1.133
-
-keycloak:
-  realm: dvdtheque
-  auth-server-url: http://localhost:8080/auth
-  ssl-required: external
-  resource: dvdtheque-api
-  credentials:
-    secret: 19a8c33e-89ec-4e5e-8e80-f752a896bf07
-  use-resource-role-mappings: true
-  cors: true
-  bearer-only: true
