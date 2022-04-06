@@ -41,17 +41,7 @@ eureka:
       enabled: true
     lease:
       duration: 2
-
-keycloak:
-  realm: dvdtheque-dev
-  auth-server-url: http://localhost:8080/auth
-  ssl-required: external
-  resource: dvdtheque-api
-  credentials:
-    secret: 6ac56dc9-255b-4534-a6bb-c657016127a8
-  use-resource-role-mappings: true
-  bearer-only: true
-  
+ 
 fichefilm:
   parsing:
     page: 20
