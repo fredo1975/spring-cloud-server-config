@@ -56,7 +56,7 @@ eureka:
 
 batch:
   export:
-    cron: 0 15 11 * * ?
+    cron: 0 20 11 * * ?
   save:
     nb:
       acteurs: 12
@@ -76,7 +76,7 @@ excel:
   dvd:
     file:
       path:
-        export: D:/dev/liste_dvd
+        export: D:/dev/liste_dvd/
       name:
         export: export.xlsx
 
