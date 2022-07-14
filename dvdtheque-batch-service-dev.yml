@@ -55,6 +55,8 @@ eureka:
       duration: 2
 
 batch:
+  export:
+    cron: 0 30 20 * * ?
   save:
     nb:
       acteurs: 12
