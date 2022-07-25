@@ -45,4 +45,4 @@ eureka:
 fichefilm:
   parsing:
     page: 20
-    cron: 0 05 22 * * ?
+    cron: 0 35 00 * * ?
