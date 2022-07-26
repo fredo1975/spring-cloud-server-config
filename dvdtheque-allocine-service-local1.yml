@@ -45,3 +45,9 @@ fichefilm:
   parsing:
     page: 5
     cron: 0 16 01 * * ?
+    
+hazelcast:
+  cluster-name: hazelcast-allocine-local
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.133
