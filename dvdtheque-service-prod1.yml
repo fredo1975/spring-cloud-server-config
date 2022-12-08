@@ -58,7 +58,7 @@ dvdtheque-batch-service:
 allocine-service:
   url: http://192.168.1.106:8762/dvdtheque-allocine-service
   byTitle: /byTitle
-
+  byId: /byId
 themoviedb:
   poster:
     path:
