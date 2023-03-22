@@ -56,7 +56,7 @@ eureka:
 
 batch:
   export:
-    cron: 0 20 11 * * ?
+    cron: 0 22 23 * * ?
   save:
     nb:
       acteurs: 12
@@ -86,7 +86,7 @@ dvd:
 
 dvdtheque-service:
   url: http://localhost:8762/dvdtheque-service
-  films: /films/
+  films: /films
   transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
   cleanAllFilms: /films/cleanAllfilms
   buildDvd: /films/buildDvd
@@ -99,4 +99,4 @@ tmdb-service:
   get-credits: /retrieveTmdbCredits/byTmdbId
   get-results: /retrieveTmdbFilm/byTmdbId
   
-export.cron: 0 10 20 * * ?
+export.cron: 0 10 23 * * ?
