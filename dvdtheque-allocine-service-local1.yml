@@ -4,10 +4,10 @@ server:
 spring:
   datasource:
     platform: postgres
-    username: postgres
+    username: dvdtheque
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
+    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
   jpa:
     show-sql: true
   security:
@@ -44,7 +44,7 @@ eureka:
 fichefilm:
   parsing:
     page: 5
-    cron: 0 00 18 * * ?
+    cron: 0 45 22 * * ?
     
 hazelcast:
   cluster-name: hazelcast-allocine-local
