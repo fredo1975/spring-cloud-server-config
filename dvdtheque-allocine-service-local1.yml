@@ -50,4 +50,4 @@ hazelcast:
   cluster-name: hazelcast-allocine-local
   networkconfig:
     tcpipconfig:
-      members: 192.168.1.133
+      members: 192.168.1.13
