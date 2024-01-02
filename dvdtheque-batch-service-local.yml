@@ -8,7 +8,8 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://192.168.1.107:5432/dvdthequedbmig?currentSchema=dvdtheque-batch-service
   batch:
-    initialize-schema: never
+    jdbc:
+      initialize-schema: never
     initializer:
       enabled: false
     job:
