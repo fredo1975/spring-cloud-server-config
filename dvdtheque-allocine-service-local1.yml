@@ -43,8 +43,8 @@ eureka:
   
 fichefilm:
   parsing:
-    page: 5
-    cron: 0 45 22 * * ?
+    page: 20
+    cron: 11 18 22 * * ?
     
 hazelcast:
   cluster-name: hazelcast-allocine-local
