@@ -55,7 +55,7 @@ keycloak:
 fichefilm:
   parsing:
     page: 8124
-    cron: 0 01 25 * * ?
+    cron: 0 28 01 * * ?
 
 hazelcast:
   cluster-name: hazelcast-allocine-prod
