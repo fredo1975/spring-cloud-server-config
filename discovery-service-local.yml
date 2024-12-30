@@ -1,4 +1,7 @@
 eureka:
+  instance:
+    #hostname: localhost
+    prefer-ip-address: true
   environment: local
   client:
     register-with-eureka: false
