@@ -1,0 +1,51 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: dvdtheque-service
+          uri: lb://dvdtheque-service
+          predicates:
+            - Path=/dvdtheque-service/**,/dvdtheque-ws/**
+        - id: dvdtheque-allocine-service
+          uri: lb://dvdtheque-allocine-service
+          predicates:
+            - Path=/dvdtheque-allocine-service/**
+        - id: dvdtheque-tmdb-service
+          uri: lb://dvdtheque-tmdb-service
+          predicates:
+            - Path=/dvdtheque-tmdb-service/**
+        - id: dvdtheque-batch-service
+          uri: lb://dvdtheque-batch-service
+          predicates:
+            - Path=/dvdtheque-batch-service/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+            - GET
+            - POST
+            - OPTIONS
+            - PUT
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://discovery-service:8761/eureka}
+  instance:
+    #hostname: localhost
+    preferIpAddress: true
+  environment: docker
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
+    org:
+        springframework:
+          security:
+            web: DEBUG
+    
