@@ -4,7 +4,7 @@ eureka:
     prefer-ip-address: true
   environment: docker
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
