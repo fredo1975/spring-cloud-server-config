@@ -1,7 +1,7 @@
 eureka:
   instance:
-    hostname: discovery-service
-    #prefer-ip-address: true
+    #hostname: discovery-service
+    prefer-ip-address: true
   environment: docker
   client:
     register-with-eureka: true
