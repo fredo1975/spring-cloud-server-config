@@ -76,15 +76,14 @@ eureka:
   instance:
     hostname: discovery-service
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 5
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
+      defaultZone: http://discovery-service:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+    environment: docker
+    pefere-ip-address: true
 
 stomp:
   endpoint: /dvdtheque-ws

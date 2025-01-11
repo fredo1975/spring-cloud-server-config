@@ -3,11 +3,11 @@ spring:
     gateway:
       routes:
         - id: dvdtheque-service
-          uri: lb://dvdtheque-service
+          uri: lb://DVDTHEQUE-SERVICE
           predicates:
             - Path=/dvdtheque-service/**,/dvdtheque-ws/**
         - id: dvdtheque-allocine-service
-          uri: lb://dvdtheque-allocine-service
+          uri: lb://DVDTHEQUE-ALLOCINE-SERVICE
           predicates:
             - Path=/dvdtheque-allocine-service/**
         - id: dvdtheque-tmdb-service
