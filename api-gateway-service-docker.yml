@@ -34,8 +34,8 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://discovery-service:8761/eureka}
   instance:
-    hostname: discovery-service
-    #preferIpAddress: true
+    #hostname: discovery-service
+    preferIpAddress: true
   environment: docker
 logging:
   level:
