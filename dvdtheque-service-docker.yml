@@ -4,7 +4,7 @@ spring:
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
-          issuer-uri: http://localhost:8080/realms/dvdtheque
+          issuer-uri: http://keycloak:8080/realms/dvdtheque
           user-name-attribute: preferred_username
   datasource:
     username: dvdtheque
