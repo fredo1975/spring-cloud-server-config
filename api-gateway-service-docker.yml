@@ -11,11 +11,11 @@ spring:
           predicates:
             - Path=/dvdtheque-allocine-service/**
         - id: dvdtheque-tmdb-service
-          uri: lb://dvdtheque-tmdb-service
+          uri: lb://DVDTHEQUE-TMDB-SERVICE
           predicates:
             - Path=/dvdtheque-tmdb-service/**
         - id: dvdtheque-batch-service
-          uri: lb://dvdtheque-batch-service
+          uri: lb://dvdtheque-BATCH-SERVICE
           predicates:
             - Path=/dvdtheque-batch-service/**
       globalcors:
