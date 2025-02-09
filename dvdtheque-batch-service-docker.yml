@@ -37,7 +37,7 @@ spring:
         registration:
           keycloak:
             client-id: dvdtheque-api
-            client-secret: eSUprhL8EaviQHx8aClTkfmIduKm18yZ
+            client-secret: NnqLbPI6as8ZkYKJUHF8lyeHL6s2xJok
             authorization-grant-type: client_credentials
 
 eureka:
