@@ -10,7 +10,7 @@ spring:
     testWhileIdle: true
     validationQuery: SELECT 1
   jpa:
-    show-sql: true
+    show-sql: false
   security:
     oauth2:
       resourceserver:
