@@ -1,14 +1,11 @@
-server:
-  port: 8087
 
 spring:
   datasource:
+    platform: postgres
     username: dvdtheque
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
-    testWhileIdle: true
-    validationQuery: SELECT 1
+    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
   jpa:
     show-sql: true
   security:
@@ -16,33 +13,39 @@ spring:
       resourceserver:
         jwt:
           #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
-          issuer-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-dev
+          issuer-uri: http://localhost:8080/auth/realms/dvdtheque
           user-name-attribute: preferred_username
       client:
         provider:
           keycloak:
-            token-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-dev/protocol/openid-connect/token
+            token-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/token
         registration:
           keycloak:
             client-id: dvdtheque-api
-            client-secret: xJCl7Y8cvnAqaPIkXJRJeEvdo9GHb0Pz
+            client-secret: AOtGQEz542SXhOFkaMtc2oEjkH2orn3b
             authorization-grant-type: client_credentials
 
 eureka:
   instance:
-    hostname: 192.168.1.103
+    hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     leaseRenewalIntervalInSeconds: 2
-    leaseExpirationDurationInSeconds: 2
+    leaseExpirationDurationInSeconds: 5
   client:
     service-url:
-      defaultZone: http://192.168.1.103:8761/eureka/,http://192.168.1.105:8761/eureka/
+      defaultZone: http://localhost:8761/eureka
     healthcheck:
       enabled: true
     lease:
-      duration: 2
- 
+      duration: 5
+  
 fichefilm:
   parsing:
-    page: 2000
-    cron: 0 45 10 * * ?
+    page: 20
+    cron: 0 59 18 * * ?
+    
+hazelcast:
+  cluster-name: hazelcast-allocine-local
+  networkconfig:
+    tcpipconfig:
+      members: 192.168.1.13

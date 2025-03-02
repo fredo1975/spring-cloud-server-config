@@ -1,4 +1,4 @@
-debug: false
+debug: true
 spring:
   datasource:
     testWhileIdle: true
@@ -37,7 +37,7 @@ spring:
         registration:
           keycloak:
             client-id: dvdtheque-api
-            client-secret: eSUprhL8EaviQHx8aClTkfmIduKm18yZ
+            client-secret: IZclfc7ltcHeeYRr2RcbN8RGidrDAgRx
             authorization-grant-type: client_credentials
 
 eureka:
@@ -76,7 +76,7 @@ excel:
   dvd:
     file:
       path:
-        export: E:/dev/liste_dvd/
+        export: /tmp/liste_dvd/
       name:
         export: export.xlsx
 

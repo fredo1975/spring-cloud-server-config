@@ -43,11 +43,11 @@ eureka:
   
 fichefilm:
   parsing:
-    page: 5
-    cron: 0 45 22 * * ?
+    page: 20
+    cron: 0 59 18 * * ?
     
 hazelcast:
   cluster-name: hazelcast-allocine-local
   networkconfig:
     tcpipconfig:
-      members: 192.168.1.133
+      members: 192.168.1.13

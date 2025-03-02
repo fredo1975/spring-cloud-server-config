@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    username: dvdtheque
+    password: zotla7
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-service
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: false
