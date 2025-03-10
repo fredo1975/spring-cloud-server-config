@@ -54,7 +54,7 @@ keycloak:
   
 fichefilm:
   parsing:
-    page: 8124
+    page: 4000
     cron: 0 01 15 * * ?
     
 hazelcast:
