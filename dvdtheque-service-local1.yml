@@ -42,8 +42,6 @@ logging:
         springframework:
           security:
             web: DEBUG
-  file:
-      path: logs
 hibernate:
   hbm2ddl:
     auto: validate
