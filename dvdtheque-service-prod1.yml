@@ -1,10 +1,6 @@
 server:
   port: 8083
 
-logging:
-  file:
-    path: /opt/dvdtheque_rest_service/logs/dvdtheque-service.log
-
 spring:
   security:
     oauth2:
