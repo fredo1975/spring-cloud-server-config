@@ -19,8 +19,7 @@ logging:
           security:
             web: DEBUG
 
-dvdtheque-service:
-  url: http://localhost:8762/dvdtheque-service
+dvdtheque-service.url: http://localhost:8762/dvdtheque-service
 
 eureka:
   instance:
