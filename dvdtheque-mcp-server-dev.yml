@@ -1,0 +1,28 @@
+server:
+  port: 8087
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
+          issuer-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-dev
+          user-name-attribute: preferred_username
+
+dvdtheque-service:
+  url: http://192.168.1.105:8762/dvdtheque-service
+
+eureka:
+  instance:
+    hostname: 192.168.1.103
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 2
+    leaseExpirationDurationInSeconds: 2
+  client:
+    service-url:
+      defaultZone: http://192.168.1.103:8761/eureka/,http://192.168.1.105:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 2
