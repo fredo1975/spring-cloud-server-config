@@ -1,7 +1,6 @@
 eureka:
   environment: prod
   instance:
-    hostname: 192.168.1.108
     preferIpAddress: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     leaseRenewalIntervalInSeconds: 30
