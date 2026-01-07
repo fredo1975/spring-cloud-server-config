@@ -92,6 +92,7 @@ stomp:
     port: 61613
     
 hazelcast:
+  cluster-name: hazelcast-local
   network:
     join:
       multicast:

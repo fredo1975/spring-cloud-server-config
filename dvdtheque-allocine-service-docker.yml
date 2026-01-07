@@ -45,6 +45,7 @@ fichefilm:
     cron: 0 59 18 * * ?
     
 hazelcast:
+  cluster-name: hazelcast-local
   network:
     join:
       multicast:
