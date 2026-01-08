@@ -1,1 +1,2 @@
 # spring-cloud-server-config
+This project is a Spring Cloud Config Server that provides centralized configuration management for distributed systems. It allows you to manage external properties for applications across all environments.
