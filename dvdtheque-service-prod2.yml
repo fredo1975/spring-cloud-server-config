@@ -39,7 +39,7 @@ hibernate:
 batch:
   save:
     nb:
-      acteurs: 18
+      acteurs: 20
 limit:
   film:
     size: 40
