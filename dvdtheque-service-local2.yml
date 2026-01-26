@@ -97,3 +97,11 @@ keycloak:
   use-resource-role-mappings: true
   cors: true
   bearer-only: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true

@@ -100,3 +100,11 @@ hazelcast:
   networkconfig:
     tcpipconfig:
       members: 192.168.1.13
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true
