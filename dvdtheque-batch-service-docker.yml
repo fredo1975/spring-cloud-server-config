@@ -39,6 +39,11 @@ spring:
             client-id: dvdtheque-api
             client-secret: sydv4ZVifomr6nJ115cq9NTJb1ZtqXiz
             authorization-grant-type: client_credentials
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      read-date-timers-as-timestamps: true
 
 eureka:
   instance:
