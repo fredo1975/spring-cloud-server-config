@@ -35,3 +35,10 @@ themoviedb:
   poster:
     path:
       url: http://image.tmdb.org/t/p/w500
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true
