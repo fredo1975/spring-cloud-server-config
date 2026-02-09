@@ -41,11 +41,18 @@ eureka:
   
 fichefilm:
   parsing:
-    page: 20
+    page: 200
     cron: 0 59 18 * * ?
     
 hazelcast:
   cluster-name: hazelcast-allocine-local
   networkconfig:
     tcpipconfig:
-      members: 192.168.1.13
+      members: 172.18.0.3
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true
