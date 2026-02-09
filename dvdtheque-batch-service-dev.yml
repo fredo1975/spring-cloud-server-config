@@ -104,3 +104,11 @@ tmdb-service:
   get-results: /retrieveTmdbFilm/byTmdbId
   
 export.cron: 0 10 20 * * ?
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true

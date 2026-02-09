@@ -46,3 +46,11 @@ fichefilm:
   parsing:
     page: 2000
     cron: 0 45 10 * * ?
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true
