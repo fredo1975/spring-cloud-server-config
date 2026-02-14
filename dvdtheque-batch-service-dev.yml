@@ -39,7 +39,11 @@ spring:
             client-id: dvdtheque-api
             client-secret: xJCl7Y8cvnAqaPIkXJRJeEvdo9GHb0Pz
             authorization-grant-type: client_credentials
-
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB      # Max size for a single file
+      max-request-size: 10MB   # Max size for the entire multipart request
 eureka:
   instance:
     hostname: 192.168.1.105
