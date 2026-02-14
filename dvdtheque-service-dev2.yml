@@ -31,7 +31,11 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB      # Max size for a single file
+      max-request-size: 10MB   # Max size for the entire multipart request
 hibernate:
   hbm2ddl:
     auto: validate
