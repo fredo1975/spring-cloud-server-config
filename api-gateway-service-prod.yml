@@ -35,7 +35,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://192.168.1.108:8761/eureka},${EUREKA_URI:http://192.168.1.106:8761/eureka}
-
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 180
 logging:
   level:
     org.springframework.cloud.gateway: INFO

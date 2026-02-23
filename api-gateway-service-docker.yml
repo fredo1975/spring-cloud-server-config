@@ -38,8 +38,8 @@ eureka:
     instance:
         hostname: ${EUREKA_HOSTNAME:api-gateway-service}
         instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-        leaseRenewalIntervalInSeconds: 2
-        leaseExpirationDurationInSeconds: 5
+        lease-renewal-interval-in-seconds: 30
+        lease-expiration-duration-in-seconds: 180
   environment: docker
 logging:
   level:

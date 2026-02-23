@@ -3,8 +3,8 @@ eureka:
   instance:
     preferIpAddress: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    leaseRenewalIntervalInSeconds: 30
-    leaseExpirationDurationInSeconds: 90
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 180
   client:
     register-with-eureka: true
     fetch-registry: true
