@@ -6,7 +6,7 @@ spring:
     username: dvdtheque
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-batch-service
+    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-batch-service
   batch:
     initialize-schema: always
     initializer:
@@ -33,11 +33,11 @@ spring:
       client:
         provider:
           keycloak:
-            token-uri: http://localhost:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+            token-uri: http://localhost:8080/realms/dvdtheque/protocol/openid-connect/token
         registration:
           keycloak:
             client-id: dvdtheque-api
-            client-secret: IZclfc7ltcHeeYRr2RcbN8RGidrDAgRx
+            client-secret: O6psFNkYX0Qw5I3aCrJUOy9qSaHENV8i
             authorization-grant-type: client_credentials
 
 eureka:
