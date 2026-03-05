@@ -33,7 +33,11 @@ spring:
       client:
         provider:
           keycloak:
-            token-uri: http://192.168.1.105:8080/auth/realms/dvdtheque/protocol/openid-connect/token
+            issuer-uri: https://192.168.1.106/auth/realms/dvdtheque
+
+            # On demande le token directement au Pi en HTTP (Pas de problème de certificat !)
+            token-uri: http://192.168.1.108:8080/realms/dvdtheque/protocol/openid-connect/token
+            jwk-set-uri: http://192.168.1.108:8080/realms/dvdtheque/protocol/openid-connect/certs
         registration:
           keycloak:
             client-id: dvdtheque-api
