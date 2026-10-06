@@ -16,6 +16,11 @@ spring:
     url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-service
     testWhileIdle: true
     validationQuery: SELECT 1
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
   jpa:
     show-sql: false
   batch:
@@ -100,3 +105,11 @@ hazelcast:
   networkconfig:
     tcpipconfig:
       members: 192.168.1.13
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  prometheus:
+    enabled: true

@@ -9,23 +9,28 @@ spring:
     url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
     testWhileIdle: true
     validationQuery: SELECT 1
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
   jpa:
     show-sql: false
   security:
     oauth2:
       resourceserver:
         jwt:
-          #jwk-set-uri: http://localhost:8080/auth/realms/dvdtheque-realm/protocol/openid-connect/certs
-          issuer-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-dev
+          jwk-set-uri: http://192.168.1.108:8080/realms/dvdtheque-dev/protocol/openid-connect/certs
+          issuer-uri: https://192.168.1.107/auth/realms/dvdtheque-dev
           user-name-attribute: preferred_username
       client:
         provider:
           keycloak:
-            token-uri: http://192.168.1.105:8080/auth/realms/dvdtheque-dev/protocol/openid-connect/token
+            token-uri: https://192.168.1.107/auth/realms/dvdtheque-dev/protocol/openid-connect/token
         registration:
           keycloak:
             client-id: dvdtheque-api
-            client-secret: xJCl7Y8cvnAqaPIkXJRJeEvdo9GHb0Pz
+            client-secret: mealbNq7RbdUsO5PVE4WXa8nUfeBLMXr
             authorization-grant-type: client_credentials
 
 eureka:
