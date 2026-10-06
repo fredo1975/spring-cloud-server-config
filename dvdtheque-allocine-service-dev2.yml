@@ -9,6 +9,11 @@ spring:
     url: jdbc:postgresql://192.168.1.108:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
     testWhileIdle: true
     validationQuery: SELECT 1
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
   jpa:
     show-sql: false
   security:
