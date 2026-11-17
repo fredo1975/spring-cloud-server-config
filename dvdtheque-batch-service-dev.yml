@@ -32,7 +32,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://192.168.1.108:8080/realms/dvdtheque-dev/protocol/openid-connect/certs
+          jwk-set-uri: http://192.168.1.107:8080/realms/dvdtheque-dev/protocol/openid-connect/certs
           issuer-uri: https://192.168.1.107/auth/realms/dvdtheque-dev
           user-name-attribute: preferred_username
       client:
@@ -42,8 +42,8 @@ spring:
             issuer-uri: https://192.168.1.107/auth/realms/dvdtheque-dev
 
             # On demande le token directement au Pi en HTTP (Pas de problème de certificat !)
-            token-uri: http://192.168.1.108:8080/realms/dvdtheque-dev/protocol/openid-connect/token
-            jwk-set-uri: http://192.168.1.108:8080/realms/dvdtheque-dev/protocol/openid-connect/certs
+            token-uri: http://192.168.1.107:8080/realms/dvdtheque-dev/protocol/openid-connect/token
+            jwk-set-uri: http://192.168.1.107:8080/realms/dvdtheque-dev/protocol/openid-connect/certs
         registration:
           keycloak:
             client-id: dvdtheque-api
@@ -99,7 +99,7 @@ dvd:
     path: G:/films
 
 dvdtheque-service:
-  url: http://192.168.1.105:8762/dvdtheque-service
+  url: http://192.168.1.133:8762/dvdtheque-service
   films: /films
   transformTmdbFilmToDvdThequeFilm: /transformTmdbFilmToDvdThequeFilm/tmdb
   cleanAllFilms: /films/cleanAllfilms
@@ -107,7 +107,7 @@ dvdtheque-service:
   saveFilm: /films/saveProcessedFilm
   
 tmdb-service:
-  url: http://192.168.1.105:8762/dvdtheque-tmdb-service
+  url: http://192.168.1.133:8762/dvdtheque-tmdb-service
   byTitle: /retrieveTmdbFilmListByTitle/byTitle
   release-date: /retrieveTmdbFrReleaseDate/byTmdbId
   get-credits: /retrieveTmdbCredits/byTmdbId
