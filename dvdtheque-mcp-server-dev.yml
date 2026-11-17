@@ -15,13 +15,13 @@ dvdtheque-service:
 
 eureka:
   instance:
-    hostname: 192.168.1.103
+    hostname: 192.168.1.133
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     leaseRenewalIntervalInSeconds: 2
     leaseExpirationDurationInSeconds: 2
   client:
     service-url:
-      defaultZone: http://192.168.1.103:8761/eureka/,http://192.168.1.105:8761/eureka/
+      defaultZone: http://192.168.1.133:8761/eureka/,http://192.168.1.105:8761/eureka/
     healthcheck:
       enabled: true
     lease:
