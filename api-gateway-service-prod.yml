@@ -30,11 +30,15 @@ spring:
                 - POST
                 - OPTIONS
                 - PUT
+    loadbalancer:
+      cache:
+        ttl: 5s
 
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    registry-fetch-interval-seconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://192.168.1.108:8761/eureka},${EUREKA_URI:http://192.168.1.106:8761/eureka}
   instance:
