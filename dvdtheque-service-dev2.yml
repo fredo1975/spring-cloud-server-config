@@ -76,7 +76,7 @@ themoviedb:
 
 eureka:
   instance:
-    hostname: 192.168.1.105
+    hostname: 192.168.1.133
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 180
