@@ -25,7 +25,7 @@ spring:
       default:
         contentType: application/json
   activemq:
-    broker-url: tcp://192.168.1.105:61616
+    broker-url: tcp://localhost:61616
     user: admin
     password: admin
   security:
