@@ -21,7 +21,7 @@ spring:
     change-log: classpath:db/changelog/db.changelog-master.yaml
     enabled: true
     default-schema: dvdtheque-allocine-service
-    liquibase-schema: dvdtheque-allocine-service
+    liquibase-schema: public
   security:
     oauth2:
       resourceserver:
