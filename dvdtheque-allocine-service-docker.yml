@@ -10,9 +10,18 @@ spring:
       minimum-idle: 2
       connection-timeout: 30000
       idle-timeout: 600000
-    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
+    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-allocine-service
   jpa:
-    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: dvdtheque-allocine-service
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.sql
+    enabled: true
+    default-schema: dvdtheque-allocine-service
+    liquibase-schema: dvdtheque-allocine-service
   security:
     oauth2:
       resourceserver:

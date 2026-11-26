@@ -10,7 +10,7 @@ spring:
     username: dvdtheque
     password: zotla7
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://192.168.1.107:5432/dvdthequedb?currentSchema=dvdtheque-service
+    url: jdbc:postgresql://localhost:5432/dvdthequedb?currentSchema=dvdtheque-service
     testWhileIdle: true
     validationQuery: SELECT 1
     hikari:
@@ -18,8 +18,17 @@ spring:
       minimum-idle: 2
       connection-timeout: 30000
       idle-timeout: 600000
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    default-schema: dvdtheque-service
+    liquibase-schema: dvdtheque-service
   jpa:
-    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: dvdtheque-service
   batch:
     job:
       enabled: false
