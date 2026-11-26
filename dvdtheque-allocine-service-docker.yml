@@ -18,7 +18,7 @@ spring:
       hibernate:
         default_schema: dvdtheque-allocine-service
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-master.sql
+    change-log: classpath:db/changelog/db.changelog-master.yaml
     enabled: true
     default-schema: dvdtheque-allocine-service
     liquibase-schema: dvdtheque-allocine-service

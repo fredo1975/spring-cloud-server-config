@@ -19,7 +19,7 @@ spring:
       hibernate:
         default_schema: dvdtheque-batch-service
   liquibase:
-    change-log: classpath:db/changelog/db.changelog-master.sql
+    change-log: classpath:db/changelog/db.changelog-master.yaml
     enabled: true
     default-schema: dvdtheque-batch-service
     liquibase-schema: dvdtheque-batch-service
